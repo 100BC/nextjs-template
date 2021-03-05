@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-hudochenkov/order",
+    "stylelint-config-prettier"
+  ],
+  "plugins": ["stylelint-order", "stylelint-scss"],
+  "rules": {
+    "order/properties-alphabetical-order": null,
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$"
+  }
+}

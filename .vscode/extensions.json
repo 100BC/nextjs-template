@@ -4,6 +4,7 @@
     "dbaeumer.vscode-eslint",
     "streetsidesoftware.code-spell-checker",
     "formulahendry.auto-close-tag",
-    "stylelint.vscode-stylelint"
+    "stylelint.vscode-stylelint",
+    "formulahendry.auto-rename-tag"
   ]
 }

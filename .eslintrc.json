@@ -15,13 +15,24 @@
   },
   "plugins": ["@typescript-eslint"],
   "rules": {
-    "react/react-in-jsx-scope": 0,
+    /* Prefer TypeScript */
     "react/prop-types": 0,
     "react/require-default-props": 0,
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["warn"],
-    "react/jsx-props-no-spreading": [1, { "custom": "ignore" }],
+    "@typescript-eslint/no-unused-vars": 0,
+
+    /* Rules */
     "import/prefer-default-export": 0,
+    "arrow-body-style": 0,
+    "react/jsx-props-no-spreading": [1, { "custom": "ignore" }],
+    "jsx-a11y/label-has-associated-control": [2, { "assert": "htmlFor" }],
+
+    /* NextJS Custom Components */
+    // Declared top scope in Layout
+    "react/react-in-jsx-scope": 0,
+    // next/link passes the href to the <a> tag
+    // already has error if next/link is missing the href
+    // be careful with <a> tags not wrapped in next/link
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
@@ -30,7 +41,16 @@
         "aspects": ["invalidHref", "preferButton"]
       }
     ],
-    "jsx-a11y/label-has-associated-control": [2, { "assert": "htmlFor" }],
-    "arrow-body-style": 0
+    // Throws error if next/image is missing an alt tag
+    "jsx-a11y/alt-text": [
+      2,
+      {
+        "elements": ["img", "object", "area", "input[type=\"image\"]"],
+        "img": ["Image"],
+        "object": ["Object"],
+        "area": ["Area"],
+        "input[type=\"image\"]": ["InputImage"]
+      }
+    ]
   }
 }

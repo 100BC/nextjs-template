@@ -41,9 +41,9 @@
         "aspects": ["invalidHref", "preferButton"]
       }
     ],
-    // Throws error if next/image is missing an alt tag
+    // Throws a warning if next/image is missing an alt tag
     "jsx-a11y/alt-text": [
-      2,
+      1,
       {
         "elements": ["img", "object", "area", "input[type=\"image\"]"],
         "img": ["Image"],

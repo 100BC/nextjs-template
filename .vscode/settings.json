@@ -13,5 +13,22 @@
     "package.json",
     "next.config.js",
     ".env.local"
-  ]
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#022471",
+    "activityBar.activeBorder": "#bc033c",
+    "activityBar.background": "#022471",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#bc033c",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "statusBar.background": "#01143f",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#022471",
+    "titleBar.activeBackground": "#01143f",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#01143f99",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#01143f"
 }

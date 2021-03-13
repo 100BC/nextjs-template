@@ -26,7 +26,7 @@
     "import/prefer-default-export": 0,
     "arrow-body-style": 0,
     "react/jsx-props-no-spreading": [1, { "custom": "ignore" }],
-    "jsx-a11y/label-has-associated-control": [2, { "assert": "either" }],
+    "jsx-a11y/label-has-associated-control": [2, { "assert": "htmlFor" }],
 
     /* NextJS */
     // Declared top scope in Layout

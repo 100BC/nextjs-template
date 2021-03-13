@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'normalize';
 
 html {
   font-size: 62.5%;
@@ -10,12 +11,6 @@ html {
   @media only screen and (max-width: $phone) {
     font-size: 50%;
   }
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -40,43 +35,8 @@ a {
 button {
   border: 0;
   background: none;
-  cursor: pointer;
 
   &:focus {
     outline: 1px solid;
   }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
-h1 {
-  font-weight: 600;
-  font-size: 3.6rem;
-}
-
-h2 {
-  font-weight: 300;
-  font-size: 2.6rem;
-}
-
-h3 {
-  font-size: 2.4rem;
-}
-
-h4 {
-  font-weight: 300;
-  font-size: 2rem;
-}
-
-h5 {
-  font-weight: normal;
-  font-size: 1.6rem;
 }

@@ -2,7 +2,12 @@
 
 Template to use to bootstrap Nextjs project with Typescript and SCSS
 
-## Linters & Formatter
+## Getting Started
+` yarn && yarn dev`
+
+Open browser and navigate to [http://localhost:3000/](http://localhost:3000/)
+
+## Linters
 
 ```bash
 # You can use VSCode ESLint, and StyleLint Extensions for automatic Linting

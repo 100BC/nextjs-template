@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'normalize';
+@use 'styles/variables' as *;
+@use 'styles/normalize';
 
 html {
   font-size: 62.5%;

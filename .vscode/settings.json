@@ -4,7 +4,8 @@
   "editor.formatOnSave": true,
   "cSpell.words": [
     "msapplication",
-    "preconnect"
+    "preconnect",
+    "stylelint"
   ],
   "cSpell.ignorePaths": [
     "node_modules",

@@ -2,7 +2,10 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "cSpell.words": [],
+  "cSpell.words": [
+    "msapplication",
+    "preconnect"
+  ],
   "cSpell.ignorePaths": [
     "node_modules",
     "yarn.lock",

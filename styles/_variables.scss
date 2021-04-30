@@ -1,6 +1,14 @@
 /* MEDIA QUERY */
 $small-phone: 320px;
-$phone: 640px;
+$phone: 425px;
 $tablet: 768px;
-$laptop: 992px;
-$desktop: 1024px;
+$laptop: 1024px;
+$desktop: 1440px;
+
+/* CONSTANTS */
+$max-width: 76.8rem; // same as tablet size but responsive
+
+/* COLOURS */
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$grey: hsl(0, 0%, 50%);

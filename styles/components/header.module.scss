@@ -1,0 +1,46 @@
+@use 'styles/variables' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: $grey;
+  color: $white;
+  box-shadow: 0 0 1rem $black;
+
+  @media only screen and (max-width: $tablet) {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  max-width: $max-width;
+  margin: auto;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+  white-space: nowrap;
+
+  @media only screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.mobileNav {
+  display: none;
+  padding: 8px;
+
+  @media only screen and (max-width: $tablet) {
+    display: flex;
+  }
+}

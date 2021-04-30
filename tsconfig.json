@@ -19,9 +19,8 @@
     "target": "esnext",
     "baseUrl": ".",
     "paths": {
-      "@globalStyle": ["styles/globals.scss"],
-      "@componentStyles/*": ["styles/components/*"],
-      "@pageStyles/*": ["styles/pages/*"]
+      "@cStyles/*": ["styles/components/*"],
+      "@pStyles/*": ["styles/pages/*"]
     }
   },
   "exclude": ["node_modules"],

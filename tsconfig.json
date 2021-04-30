@@ -19,8 +19,11 @@
     "target": "esnext",
     "baseUrl": ".",
     "paths": {
-      "@cStyles/*": ["styles/components/*"],
-      "@pStyles/*": ["styles/pages/*"]
+      "@components/*": ["./components/*"],
+      "@metaTags/*": ["./metaTags/*"],
+      "@styles/*": ["./styles/*"],
+      "@cStyles/*": ["./styles/components/*"],
+      "@pStyles/*": ["./styles/pages/*"]
     }
   },
   "exclude": ["node_modules"],

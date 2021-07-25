@@ -3,6 +3,8 @@ module.exports = {
     locales: ['en-US'],
     defaultLocale: 'en-US',
   },
+
+  // Allows SVGs to be added as components
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

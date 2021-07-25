@@ -2,7 +2,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "cSpell.words": ["msapplication", "preconnect", "stylelint"],
+  "cSpell.words": ["MIXINS", "msapplication", "preconnect", "stylelint"],
   "cSpell.ignorePaths": [
     "node_modules",
     "yarn.lock",

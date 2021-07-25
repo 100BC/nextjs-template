@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-import MetaTags from '@components/metaTags/index';
+import MetaTags from './MetaTags';
 import Header from './Header';
 
 type Props = {

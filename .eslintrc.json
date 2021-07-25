@@ -29,8 +29,6 @@
     "jsx-a11y/label-has-associated-control": [2, { "assert": "htmlFor" }],
 
     /* NextJS */
-    // Declared top scope in _app.tsx
-    "react/react-in-jsx-scope": 0,
     // next/link passes the href to the <a> tag
     // already has error if next/link is missing the href
     // be careful with <a> tags not wrapped in next/link

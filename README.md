@@ -1,6 +1,6 @@
 # nextjs-template
 
-Template to use to bootstrap Nextjs project with Typescript and SCSS
+Template to use to bootstrap NextJS project with Typescript and SCSS
 
 ## Installation
 

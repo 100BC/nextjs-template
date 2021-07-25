@@ -20,10 +20,9 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["./components/*"],
-      "@metaTags/*": ["./metaTags/*"],
-      "@styles/*": ["./styles/*"],
-      "@cStyles/*": ["./styles/components/*"],
-      "@pStyles/*": ["./styles/pages/*"]
+      "@styles/*": ["./styles/pages/*"],
+      "@utils/*": ["./utils/*"],
+      "@public/*": ["./public/*"]
     }
   },
   "exclude": ["node_modules"],

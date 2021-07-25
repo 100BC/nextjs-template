@@ -10,6 +10,16 @@ Template to use to bootstrap NextJS project with Typescript and SCSS
 
 3. Start dev server: `yarn dev`
 
+## Guidelines
+
+1. Every page component must be wrapped in a `<main>` tag
+
+2. Page Styles are located in `styles/pageStyles/*` and can be imported with `@styles/*`. Whereas component stylesheets are within their respective folders
+
+3. Change browser styling defaults in `styles/_config.scss`, global is reserved for global classnames
+
+4. To create a global style first create an SCSS template or mixin in `styles/_variables.scss`
+
 ## Scripts
 
 ```bash
@@ -23,7 +33,7 @@ yarn build
 yarn start
 
 # find TypeScript Errors
-yarn type-check
+yarn tsc
 
 # Run eslint and stylelint on the project concurrently
 yarn lint:all

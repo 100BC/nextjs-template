@@ -11,7 +11,7 @@ const Layout = ({ children }: Props) => (
   <>
     <MetaTags />
     <Header />
-    <main>{children}</main>
+    {children}
   </>
 );
 

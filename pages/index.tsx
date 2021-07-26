@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Layout from '@components/Layout';
+
 const Home = () => {
   return (
-    <main>
+    <Layout>
       <h1>Hello World</h1>
-    </main>
+    </Layout>
   );
 };
 

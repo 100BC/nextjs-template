@@ -25,7 +25,7 @@ html {
 body {
   background: var(--background-color);
   color: var(--font-color);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 *,
@@ -64,7 +64,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: hsl(240, 100%, 50%); // change me
+    color: hsl(240, 100%, 50%);
   }
 }
 
@@ -73,7 +73,7 @@ button {
   background: none;
 
   &:hover {
-    color: hsl(240, 100%, 50%); // change me
+    color: hsl(240, 100%, 50%);
   }
 }
 

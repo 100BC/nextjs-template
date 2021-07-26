@@ -5,6 +5,8 @@
     "streetsidesoftware.code-spell-checker",
     "formulahendry.auto-close-tag",
     "stylelint.vscode-stylelint",
-    "formulahendry.auto-rename-tag"
+    "formulahendry.auto-rename-tag",
+    "johnpapa.vscode-peacock",
+    "dsznajder.es7-react-js-snippets"
   ]
 }

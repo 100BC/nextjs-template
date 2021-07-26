@@ -1,1 +1,3 @@
 styles/_normalize.scss
+.next/
+node_modules

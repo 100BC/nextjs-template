@@ -1,35 +1,77 @@
 # nextjs-template
 
-Template to use to bootstrap NextJS project with Typescript and SCSS
+Template to use to bootstrap [NextJS](https://nextjs.org/) project with [Typescript](https://www.typescriptlang.org/) and [SCSS](https://sass-lang.com/).
+
+The template has settings and prebuilt features described below for easier development. Change them as needed.
+
+This template will be updated regularly with new defaults and updates
 
 ## Installation
 
-1. Make sure [node](https://nodejs.org/en/) and [yarn](https://classic.yarnpkg.com/en/) are installed on the system
+1. Make sure [node](https://nodejs.org/en/) and [yarn](https://classic.yarnpkg.com/en/) are installed on the system.
 
-2. Install packages: `yarn install`
+2. Consider installing the project recommended extensions for VS Code.
 
-3. Start dev server: `yarn dev`
+   2.1. This project uses [Peacock Extension](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock), to theme VS Code Editor. Edit/remove it as you see fit.
+
+3. Install packages: `yarn install`
+
+4. Start dev server: `yarn dev`
 
 ## Guidelines
 
-1. Every page component must be wrapped in a `<main>` tag
+- Every page component located in `pages/*` must be wrapped in the `<Layout>` component for easy meta tag customization.
 
-2. Page Styles are located in `styles/pageStyles/*` and can be imported with `@styles/*`. Whereas component stylesheets are within their respective folders
+- Page component styles are located in `styles/pageStyles/*` and can be imported with `@styles/*`. Whereas component stylesheets should be located within their respective folders named as `styles.module.scss`.
 
-3. Change browser styling defaults in `styles/_config.scss`, global is reserved for global classnames
+- Change browser styling defaults in `styles/_config.scss`. The `globals.scss` file is for global classnames.
 
-4. To create a global style first create an SCSS template or mixin in `styles/_variables.scss`
+  - The repo use [Normalize.css](https://necolas.github.io/normalize.css/) via `styles/_normalize.scss`
+
+  - To create a global style first create an SCSS template or mixin in `styles/_variables.scss` for reusability.
+
+  - The repo has system based dark/light mode toggle.
+
+  - The repo has responsive font size of base 10, 9, 8 based on screen size.
+
+- The Header component is configured for responsive mobile styling. It will appear at the bottom of the screen on small screen sizes.
+
+- The repo utilizes [Open Graph Protocol](https://opengraphprotocol.org/). The default values are defined in `components/Layout.tsx`.
+
+- The repo uses [@svgr/webpack](https://www.npmjs.com/package/@svgr/webpack) to allow inline SVG components.
+
+## Default Settings
+
+### Change these settings as needed before releasing/working on the project
+
+- Edit the Google Fonts in `pages/_document.tsx`. Current default is [Roboto](https://fonts.google.com/specimen/Roboto).
+
+- Generate and replace the default Favicon settings in `pages/_document.tsx` and `public/*`. [RealFaviconGenerator](https://realfavicongenerator.net) was used to create the temporary favicon.
+
+- Change default meta tags variables in `components/Layout.tsx`
+
+- Change the `site_name` Open Graph Protocol value in `components/Layout.tsx`
+
+- Create an image for Open Graph Protocol and replace the defaults in `components/Layout.tsx` and `public/OGP.png`. The image should `1200 x 630` in dimension for best result.
+
+- Edit theming colors in `styles/_variables.scss`. Use [Adobe Color](https://color.adobe.com/) to create a gradient. Default is `#4A43DE` and its shades are used.
+
+- Edit dark mode background and font colors in `styles/_config.scss` if needed.
+
+- Remove `.gitkeep` files as needed.
 
 ## Scripts
 
 ```bash
-# open website on http://localhost:3000/
+# Note these scripts have only been tested on UNIX systems
+
+# starts the website on http://localhost:3000/
 yarn dev
 
 # compile code
 yarn build
 
-# start built code
+# starts the compiled code on http://localhost:3000/
 yarn start
 
 # find TypeScript Errors
@@ -45,6 +87,8 @@ yarn format:all
 ## Linting and Formatting
 
 ```bash
+# Note these scripts have only been tested on UNIX systems
+
 # Linting
 # You can use VSCode ESLint, and StyleLint Extensions for automatic Linting
 yarn lint:all

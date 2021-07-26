@@ -1,15 +1,10 @@
 import React from 'react';
-import Layout from 'components/Layout';
 import type { AppProps /* AppContext */ } from 'next/app';
 
-import '../styles/global.scss';
+import '../styles/globals.scss';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  );
+  return <Component {...pageProps} />;
 }
 
 // Only uncomment this method if you have blocking data requirements for

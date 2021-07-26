@@ -26,9 +26,9 @@ This template will be updated regularly with new defaults and updates
 
 - Change browser styling defaults in `styles/_config.scss`. The `globals.scss` file is for global classnames.
 
-  - The repo use [Normalize.css](https://necolas.github.io/normalize.css/) via `styles/_normalize.scss`
-
   - To create a global style first create an SCSS template or mixin in `styles/_variables.scss` for reusability.
+
+  - The repo use [Normalize.css](https://necolas.github.io/normalize.css/) via `styles/_normalize.scss`
 
   - The repo has system based dark/light mode toggle.
 
@@ -44,13 +44,13 @@ This template will be updated regularly with new defaults and updates
 
 ### Change these settings as needed before releasing/working on the project
 
-- Edit the Google Fonts in `pages/_document.tsx`. Current default is [Roboto](https://fonts.google.com/specimen/Roboto).
+- Edit the Google Fonts in `pages/_document.tsx`. The default is [Roboto](https://fonts.google.com/specimen/Roboto).
 
 - Generate and replace the default Favicon settings in `pages/_document.tsx` and `public/*`. [RealFaviconGenerator](https://realfavicongenerator.net) was used to create the temporary favicon.
 
 - Change default meta tags variables in `components/Layout.tsx`
 
-- Change the `site_name` Open Graph Protocol value in `components/Layout.tsx`
+- Change the `og:site_name` value in `components/Layout.tsx`
 
 - Create an image for Open Graph Protocol and replace the defaults in `components/Layout.tsx` and `public/OGP.png`. The image should `1200 x 630` in dimension for best result.
 

@@ -64,7 +64,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: hsl(240, 100%, 50%);
+    color: $blue-300;
   }
 }
 
@@ -73,7 +73,7 @@ button {
   background: none;
 
   &:hover {
-    color: hsl(240, 100%, 50%);
+    color: $blue-300;
   }
 }
 

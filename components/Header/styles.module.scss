@@ -15,9 +15,13 @@
     bottom: 0;
   }
 
-  nav {
+  > nav {
     flex-wrap: wrap;
     justify-content: space-around;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px $black;
+    white-space: nowrap;
   }
 }
 
@@ -27,10 +31,6 @@
   max-width: $max-width;
   margin: auto;
   padding: 1rem;
-  font-weight: bold;
-  font-size: 2.5rem;
-  text-shadow: 0 0 10px $black;
-  white-space: nowrap;
 
   @media only screen and (max-width: $tablet) {
     display: none;

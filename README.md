@@ -30,7 +30,7 @@ This template will be updated regularly with new defaults and updates
 
   - The repo use [Normalize.css](https://necolas.github.io/normalize.css/) via `styles/_normalize.scss`
 
-  - The repo has system based dark/light mode toggle.
+  - The repo has system based automatic dark/light mode swap.
 
   - The repo has responsive font size of base 10, 9, 8 based on screen size.
 

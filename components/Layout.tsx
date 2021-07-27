@@ -5,13 +5,13 @@ import Header from './Header';
 
 const defaultTitle = 'NextJS Template';
 const defaultDescription = 'NextJS template repo with TypeScript and SCSS support';
-const defaultUrl = 'https://localhost:3000';
+const defaultCanonicalUrl = 'https://localhost:3000';
 const defaultOgpImg = 'https://localhost:3000/OGP.png';
 const defaultOgpImgAlt = 'The word temp';
 
 interface BaseProps {
   title?: string;
-  url?: string;
+  canonicalUrl?: string;
   ogpType?: string;
   description?: string;
   extraOgTags?: {
@@ -20,6 +20,7 @@ interface BaseProps {
   }[];
   className?: string;
   children?: ReactNode;
+  noIndex?: boolean;
 }
 
 interface OgpImageProps extends BaseProps {
@@ -37,11 +38,12 @@ const Layout = ({
   ogpType = 'website',
   ogpImg = defaultOgpImg,
   ogpImgAlt = defaultOgpImgAlt,
-  url = defaultUrl,
+  canonicalUrl = defaultCanonicalUrl,
   description = defaultDescription,
   extraOgTags,
   className = '',
   children,
+  noIndex = false,
 }: Props | OgpImageProps) => (
   <>
     <Head>
@@ -53,13 +55,14 @@ const Layout = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogpImg} />
       <meta property="og:image:alt" content={ogpImgAlt} />
-      <link rel="canonical" href={url} />
-      <meta property="og:url" content={url} />
+      <link rel="canonical" href={canonicalUrl} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       {extraOgTags &&
         extraOgTags.map((tag) => (
           <meta property={tag.property} content={tag.content} key={tag.content} />
         ))}
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      {noIndex && <meta name="robots" content="noindex" />}
     </Head>
     <Header />
     <main className={className}>{children}</main>

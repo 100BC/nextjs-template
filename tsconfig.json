@@ -20,7 +20,7 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["./components/*"],
-      "@styles/*": ["./styles/pages/*"],
+      "@styles/*": ["./styles/pageStyles/*"],
       "@utils/*": ["./utils/*"],
       "@public/*": ["./public/*"]
     }

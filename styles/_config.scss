@@ -71,6 +71,7 @@ a {
 button {
   border: 0;
   background: none;
+  color: inherit;
 
   &:hover {
     color: $blue-300;

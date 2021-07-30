@@ -36,7 +36,7 @@ This template will be updated regularly with new defaults and updates
 
 - The Header component is configured for responsive mobile styling. It will appear at the bottom of the screen on small screen sizes.
 
-- The repo utilizes [Open Graph Protocol](https://opengraphprotocol.org/). The default values are defined in `components/Layout.tsx`.
+- The repo utilizes [Open Graph Protocol](https://opengraphprotocol.org/). The default values are defined in `components/Layout/metaDefaults.ts`.
 
 - The repo uses [@svgr/webpack](https://www.npmjs.com/package/@svgr/webpack) to allow inline SVG components.
 
@@ -48,11 +48,9 @@ This template will be updated regularly with new defaults and updates
 
 - Generate and replace the default Favicon settings in `pages/_document.tsx` and `public/*`. [RealFaviconGenerator](https://realfavicongenerator.net) was used to create the temporary favicon.
 
-- Change default meta tags variables in `components/Layout.tsx`
+- Change default meta tags variables in `components/Layout/metaDefaults.ts`
 
-- Change the `og:site_name` value in `components/Layout.tsx`
-
-- Create an image for Open Graph Protocol and replace the defaults in `components/Layout.tsx` and `public/OGP.png`. The image should `1200 x 630` in dimension for best result.
+- Create an image for Open Graph Protocol and replace the placeholder in `public/OGP.png`. The image should `1200 x 630` in dimension for best result.
 
 - Edit theming colors in `styles/_variables.scss`. Use [Adobe Color](https://color.adobe.com/) to create a gradient. Default is `#4A43DE` and its shades are used.
 

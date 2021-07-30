@@ -1,14 +1,15 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 
-import Header from './Header';
-
-const defaultTitle = 'NextJS Template';
-const defaultSiteName = 'NextJS TS SCSS Template';
-const defaultDescription = 'NextJS template repo with TypeScript and SCSS support';
-const defaultCanonicalUrl = 'https://localhost:3000';
-const defaultOgpImg = 'https://localhost:3000/OGP.png';
-const defaultOgpImgAlt = 'The word temp';
+import Header from '../Header';
+import {
+  defaultTitle,
+  defaultSiteName,
+  defaultDescription,
+  defaultCanonicalUrl,
+  defaultOgpImg,
+  defaultOgpImgAlt,
+} from './metaDefaults';
 
 interface BaseProps {
   title?: string;

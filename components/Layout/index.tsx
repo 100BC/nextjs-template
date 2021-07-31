@@ -53,7 +53,7 @@ const Layout = ({
       <meta property="og:title" content={title} />
       <meta property="og:site_name" content={defaultSiteName} />
       <meta property="og:type" content={ogpType} />
-      <meta property="description" content={description} />
+      <meta name="description" content={description} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogpImg} />
       <meta property="og:image:alt" content={ogpImgAlt} />

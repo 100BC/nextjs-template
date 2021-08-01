@@ -6,14 +6,9 @@ import styles from './styles.module.scss';
 const Header = () => {
   return (
     <header className={styles.header}>
-      <nav className={styles.desktopNav}>
+      <nav>
         <Link href="/">
           <a title="Home">NextJS starter Kit</a>
-        </Link>
-      </nav>
-      <nav className={styles.mobileNav}>
-        <Link href="/">
-          <a title="Home">Home</a>
         </Link>
       </nav>
     </header>

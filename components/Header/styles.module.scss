@@ -9,39 +9,17 @@
   color: $white;
   box-shadow: 0 0 1rem $black;
 
-  @media only screen and (max-width: $tablet) {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-  }
-
   > nav {
+    display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
+    max-width: $max-width;
+    margin: auto;
+    padding: 1rem;
     font-weight: bold;
     font-size: 2.5rem;
     text-shadow: 0 0 10px $black;
     white-space: nowrap;
-  }
-}
-
-.desktopNav {
-  display: flex;
-  align-items: center;
-  max-width: $max-width;
-  margin: auto;
-  padding: 1rem;
-
-  @media only screen and (max-width: $tablet) {
-    display: none;
-  }
-}
-
-.mobileNav {
-  display: none;
-  padding: 8px;
-
-  @media only screen and (max-width: $tablet) {
-    display: flex;
   }
 }

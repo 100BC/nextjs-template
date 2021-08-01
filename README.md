@@ -34,8 +34,6 @@ This template will be updated regularly with new defaults and updates
 
   - The repo has responsive font size of base 10, 9, 8 based on screen size.
 
-- The Header component is configured for responsive mobile styling. It will appear at the bottom of the screen on small screen sizes.
-
 - The repo utilizes [Open Graph Protocol](https://opengraphprotocol.org/). The default values are defined in `components/Layout/metaDefaults.ts`.
 
 - The repo uses [@svgr/webpack](https://www.npmjs.com/package/@svgr/webpack) to allow inline SVG components.

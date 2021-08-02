@@ -28,7 +28,7 @@ This template will be updated regularly with new defaults and updates
 
   - To create a global style first create an SCSS template or mixin in `styles/_variables.scss` for reusability.
 
-  - The repo use [Normalize.css](https://necolas.github.io/normalize.css/) via `styles/_normalize.scss`
+  - The repo uses [Normalize.css](https://necolas.github.io/normalize.css/) via `styles/_normalize.scss`
 
   - The repo has system based automatic dark/light mode swap.
 

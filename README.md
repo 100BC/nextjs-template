@@ -22,13 +22,13 @@ This template will be updated regularly with new defaults and updates
 
 - Every page component located in `pages/*` must be wrapped in the `<Layout>` component for easy meta tag customization.
 
-- Page component styles are located in `styles/pageStyles/*` and can be imported with `@styles/*`. Whereas component stylesheets should be located within their respective folders named as `styles.module.scss`.
+- Page component styles are located in `styles/*` and can be imported with `@styles/*`. Whereas component stylesheets should be located within their respective folders named as `styles.module.scss`.
 
-- Change browser styling defaults in `styles/_config.scss`. The `globals.scss` file is for global classnames.
+- Change browser styling defaults in `styles/config/_standard.scss`. The `globals.scss` file is for global classnames.
 
-  - To create a global style first create an SCSS template or mixin in `styles/_variables.scss` for reusability.
+  - To create a global style first create an SCSS template or mixin in `styles/abstracts/{_template or _mixin}.scss` for reusability and extend it in `globals.scss`
 
-  - The repo uses [Normalize.css](https://necolas.github.io/normalize.css/) via `styles/_normalize.scss`
+  - The repo uses [Normalize.css](https://necolas.github.io/normalize.css/) via `styles/config/_normalize.scss`
 
   - The repo has system based automatic dark/light mode swap.
 
@@ -50,9 +50,9 @@ This template will be updated regularly with new defaults and updates
 
 - Create an image for Open Graph Protocol and replace the placeholder in `public/OGP.png`. The image should `1200 x 630` in dimension for best result.
 
-- Edit theming colors in `styles/_variables.scss`. Use [Adobe Color](https://color.adobe.com/) to create a gradient. Default is `#4A43DE` and its shades are used.
+- Edit theming colors in `styles/abstracts/_themes.scss`. Use [Adobe Color](https://color.adobe.com/) to create a gradient. Default is `#4A43DE` and its shades are used.
 
-- Edit dark mode background and font colors in `styles/_config.scss` if needed.
+- Edit any styling presets as needed.
 
 - Remove `.gitkeep` files as needed.
 

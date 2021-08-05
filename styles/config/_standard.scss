@@ -1,4 +1,4 @@
-@use './variables' as *;
+@use '../abstracts' as *;
 
 :root {
   --background-color: hsl(0, 0%, 85%);
@@ -45,6 +45,11 @@ time {
   margin: 0;
 }
 
+header {
+  z-index: 100;
+  box-shadow: 0 0 1rem $black;
+}
+
 main {
   max-width: $max-width;
   margin: auto;
@@ -54,6 +59,8 @@ main {
   overflow-wrap: break-word;
 }
 
+header,
+nav,
 section,
 form {
   width: 100%;

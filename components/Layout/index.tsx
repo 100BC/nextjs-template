@@ -22,7 +22,7 @@ const Layout = ({
   noIndex = false, // prevents the page from being scraped by robots
   className = '', // styles for the <main> tag that wraps the content
   children,
-}: AllOrNone<Props, OgpImageProps>) => (
+}: Props) => (
   <>
     <Head>
       <title>{title}</title>
@@ -72,7 +72,8 @@ type Props = {
   noIndex?: boolean;
   className?: string;
   children?: ReactNode;
-} & XOR<{ canonicalUrl?: string }, { canonicalUrlPath?: string }>;
+} & AllOrNone<OgpImageProps> &
+  XOR<{ canonicalUrl?: string }, { canonicalUrlPath?: string }>;
 
 interface OgpImageProps {
   ogpImg: string | null | undefined;

@@ -27,7 +27,7 @@ const Layout = ({
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href={[canonicalUrl, canonicalUrlPath].join()} />
+      <link rel="canonical" href={[canonicalUrl, canonicalUrlPath].join('')} />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       {noIndex && <meta name="robots" content="noindex" />}
       {/* Open Graph */}
@@ -35,7 +35,7 @@ const Layout = ({
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:title" content={ogpTitle || title} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content={[canonicalUrl, canonicalUrlPath].join()} />
+      <meta property="og:url" content={[canonicalUrl, canonicalUrlPath].join('')} />
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={ogpTitle || title} />

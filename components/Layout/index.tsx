@@ -1,70 +1,58 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 
+import { AllOrNone, XOR } from '@utils/interface';
+import { DOMAIN_NAME, META_DESCRIPTION, META_TITLE, SITE_NAME } from '@utils/constants';
 import Header from '../Header';
-import {
-  defaultTitle,
-  defaultSiteName,
-  defaultDescription,
-  defaultCanonicalUrl,
-  defaultOgpImg,
-  defaultOgpImgAlt,
-} from './metaDefaults';
-
-interface BaseProps {
-  title?: string;
-  canonicalUrl?: string;
-  ogpType?: string;
-  description?: string;
-  extraOgTags?: {
-    property: string | undefined;
-    content: string | undefined;
-  }[];
-  className?: string;
-  children?: ReactNode;
-  noIndex?: boolean;
-}
-
-interface OgpImageProps extends BaseProps {
-  ogpImg: string | undefined;
-  ogpImgAlt: string;
-}
-
-interface Props extends BaseProps {
-  ogpImg?: undefined;
-  ogpImgAlt?: undefined;
-}
 
 const Layout = ({
-  title = defaultTitle,
-  ogpType = 'website',
-  ogpImg = defaultOgpImg,
-  ogpImgAlt = defaultOgpImgAlt,
-  canonicalUrl = defaultCanonicalUrl,
-  description = defaultDescription,
-  extraOgTags,
-  className = '',
+  title = META_TITLE,
+  description = META_DESCRIPTION,
+  canonicalUrl = DOMAIN_NAME, // Can use either Canonical URL or Path, not both
+  canonicalUrlPath = '', // will use DOMAIN_NAME + path
+  ogpTitle, // if undefined, the og:title defaults to {title}
+  ogpType = 'website', // see https://ogp.me/#types
+  ogpImg, // if ogpImage is defined, alt, width and height must be defined
+  ogpImgAlt,
+  ogpImgWidth,
+  ogpImgHeight,
+  twitterCard = 'summary',
+  twitterSite,
+  twitterCreator,
+  noIndex = false, // prevents the page from being scraped by robots
+  className = '', // styles for the <main> tag that wraps the content
   children,
-  noIndex = false,
-}: Props | OgpImageProps) => (
+}: AllOrNone<Props, OgpImageProps>) => (
   <>
     <Head>
       <title>{title}</title>
-      <meta property="og:title" content={title} />
-      <meta property="og:site_name" content={defaultSiteName} />
-      <meta property="og:type" content={ogpType} />
       <meta name="description" content={description} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogpImg} />
-      <meta property="og:image:alt" content={ogpImgAlt} />
-      <link rel="canonical" href={canonicalUrl} />
-      <meta property="og:url" content={canonicalUrl} />
+      <link rel="canonical" href={[canonicalUrl, canonicalUrlPath].join()} />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      {extraOgTags &&
-        extraOgTags.map((tag) => (
-          <meta property={tag.property} content={tag.content} key={tag.content} />
-        ))}
       {noIndex && <meta name="robots" content="noindex" />}
+      {/* Open Graph */}
+      <meta property="og:type" content={ogpType} />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:title" content={ogpTitle || title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={[canonicalUrl, canonicalUrlPath].join()} />
+      {/* Twitter */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={ogpTitle || title} />
+      <meta name="twitter:description" content={description} />
+      {twitterSite && <meta name="twitter:site" content={twitterSite} />}
+      {twitterCreator && <meta name="twitter:creator" content={twitterCreator} />}
+      {/* Image */}
+      {ogpImg && (
+        <>
+          <meta property="og:image" content={ogpImg} />
+          <meta property="og:image:alt" content={ogpImgAlt} />
+          <meta property="og:image:width" content={ogpImgWidth!.toString()} />
+          <meta property="og:image:height" content={ogpImgHeight!.toString()} />
+          <meta name="twitter:image" content={ogpImg} />
+          <meta name="twitter:image:alt" content={ogpImgAlt} />
+        </>
+      )}
     </Head>
     <Header />
     <main className={className}>{children}</main>
@@ -72,3 +60,23 @@ const Layout = ({
 );
 
 export default Layout;
+
+type Props = {
+  title?: string;
+  description?: string;
+  ogpTitle?: string;
+  ogpType?: string;
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  twitterSite?: string;
+  twitterCreator?: string;
+  noIndex?: boolean;
+  className?: string;
+  children?: ReactNode;
+} & XOR<{ canonicalUrl?: string }, { canonicalUrlPath?: string }>;
+
+interface OgpImageProps {
+  ogpImg: string | null | undefined;
+  ogpImgAlt: string;
+  ogpImgWidth: number;
+  ogpImgHeight: number;
+}

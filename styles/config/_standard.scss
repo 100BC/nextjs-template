@@ -47,7 +47,7 @@ time {
 
 header {
   z-index: 100;
-  box-shadow: 0 0 1rem $black;
+  box-shadow: 0 0 10px $black;
 }
 
 main {
@@ -60,6 +60,7 @@ main {
 }
 
 header,
+footer,
 nav,
 section,
 form {

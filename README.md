@@ -34,7 +34,7 @@ This template will be updated regularly with new defaults and updates
 
   - The repo has responsive font size of base 10, 9, 8 based on screen size.
 
-- The repo utilizes [Open Graph Protocol](https://opengraphprotocol.org/). The default values are defined in `components/Layout/metaDefaults.ts`.
+- The repo utilizes [Open Graph Protocol](https://opengraphprotocol.org/) and [TwitterCards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards). The default values are defined in `utils/constants.ts`.
 
 - The repo uses [@svgr/webpack](https://www.npmjs.com/package/@svgr/webpack) to allow inline SVG components.
 
@@ -46,9 +46,9 @@ This template will be updated regularly with new defaults and updates
 
 - Generate and replace the default Favicon settings in `pages/_document.tsx` and `public/*`. [RealFaviconGenerator](https://realfavicongenerator.net) was used to create the temporary favicon.
 
-- Change default meta tags variables in `components/Layout/metaDefaults.ts`
+- Change default meta tags variables in `utils/constants.ts`
 
-- Create an image for Open Graph Protocol and replace the placeholder in `public/OGP.png`. The image should `1200 x 630` in dimension for best result.
+- Create an image for Open Graph Protocol and replace the placeholder in `public/OGP.png`. The placeholder is defined in `pages/index.tsx`. The image should `1200 x 630` in dimension for best result.
 
 - Edit theming colors in `styles/abstracts/_themes.scss`. Use [Adobe Color](https://color.adobe.com/) to create a gradient. Default is `#4A43DE` and its shades are used.
 

@@ -6,8 +6,12 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint:all": "eslint . --ext .js,.jsx,.ts,.tsx && stylelint 'styles/**/*.scss'",
-    "format:all": "eslint . --ext .js,.jsx,.ts,.tsx --fix && stylelint 'styles/**/*.scss' --fix && prettier --write ."
+    "lint:styles": "stylelint '**/*.scss'",
+    "lint:code": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:all": "eslint . --ext .js,.jsx,.ts,.tsx && stylelint '**/*.scss'",
+    "format:styles": "stylelint '**/*.scss' --fix && prettier --write .",
+    "format:code": "eslint . --ext .js,.jsx,.ts,.tsx --fix && prettier --write .",
+    "format:all": "eslint . --ext .js,.jsx,.ts,.tsx --fix && stylelint '**/*.scss' --fix && prettier --write ."
   },
   "dependencies": {
     "next": "^11.0.1",
@@ -32,8 +36,8 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.3.2",
     "stylelint": "^13.7.2",
-    "stylelint-config-hudochenkov": "^5.0.0",
     "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recess-order": "^2.4.0",
     "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0",

@@ -58,48 +58,62 @@ This template will be updated regularly with new defaults and updates
 
 ## Scripts
 
-```bash
-# Note these scripts have only been tested on UNIX systems
+Open website on http://localhost:3000/
 
-# starts the website on http://localhost:3000/
+```
 yarn dev
+```
 
-# compile code
+Open website on http://localhost:{PORT}/
+
+```
+yarn dev -p {PORT}
+```
+
+compile code
+
+```
 yarn build
+```
 
-# starts the compiled code on http://localhost:3000/
+start built code
+
+```
 yarn start
+```
 
-# find TypeScript Errors
-yarn tsc
+Run eslint and stylelint on the project concurrently
 
-# Run eslint and stylelint on the project concurrently
+```
 yarn lint:all
+```
 
-# Format project based on eslint, stylelint, and prettier rule sets
+Lint only styles
+
+```
+yarn lint:styles
+```
+
+Lint only the code
+
+```
+yarn lint:code
+```
+
+Format project based on eslint, stylelint, and prettier rule sets
+
+```
 yarn format:all
 ```
 
-## Linting and Formatting
+Format only the styles
 
-```bash
-# Note these scripts have only been tested on UNIX systems
+```
+yarn format:styles
+```
 
-# Linting
-# You can use VSCode ESLint, and StyleLint Extensions for automatic Linting
-yarn lint:all
+Format only the code
 
-yarn eslint . --ext .js,.jsx,.ts,.tsx
-
-yarn stylelint "styles/**/*.scss"
-
-# auto formats according to the rules
-# can enable auto format for Prettier via VSCode Extensions
-yarn format:all
-
-yarn eslint . --ext .js,.jsx,.ts,.tsx --fix
-
-yarn prettier --write .
-
-yarn stylelint "styles/**/*.scss" --fix
+```
+yarn format:code
 ```

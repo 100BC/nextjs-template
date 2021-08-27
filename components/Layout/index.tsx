@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 
-import { AllOrNone, XOR } from '@utils/interface';
+import { AllOrNone, XOR } from '@utils/interfaces';
 import { DOMAIN_NAME, META_DESCRIPTION, META_TITLE, SITE_NAME } from '@utils/constants';
 import Header from '../Header';
 

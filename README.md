@@ -24,11 +24,11 @@ This template will be updated regularly with new defaults and updates
 
 - Page component styles are located in `styles/*` and can be imported with `@styles/*`. Whereas component stylesheets should be located within their respective folders named as `styles.module.scss`.
 
-- Change browser styling defaults in `styles/config/_standard.scss`. The `globals.scss` file is for global classnames.
+- Change browser styling defaults in `styles/globals.scss`.
 
-  - To create a global style first create an SCSS template or mixin in `styles/abstracts/{_template or _mixin}.scss` for reusability and extend it in `globals.scss`
+  - Avoid creating global classnames, instead create a custom component
 
-  - The repo uses [Normalize.css](https://necolas.github.io/normalize.css/) via `styles/config/_normalize.scss`
+  - The repo uses [normalize.css](https://www.npmjs.com/package/normalize.css), which is imported in `pages/_app.tsx`
 
   - The repo has system based automatic dark/light mode swap.
 

@@ -1,4 +1,8 @@
 {
+  "stylelint.validate": ["css", "postcss", "scss"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
@@ -12,8 +16,7 @@
     ".stylelintrc.json",
     "package.json",
     "next.config.js",
-    ".env.local",
-    "styles/_normalize.scss"
+    ".env.local"
   ],
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#4d4688",

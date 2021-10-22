@@ -1,11 +1,16 @@
 {
+  // Stylelint
   "stylelint.validate": ["css", "postcss", "scss"],
   "editor.codeActionsOnSave": {
     "source.fixAll.stylelint": true
   },
+
+  // Prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
+
+  // Code Spell Checker
   "cSpell.words": ["MIXINS", "msapplication", "noindex", "preconnect", "stylelint"],
   "cSpell.ignorePaths": [
     "node_modules",
@@ -18,6 +23,8 @@
     "next.config.js",
     ".env.local"
   ],
+
+  // Peacock
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#4d4688",
     "activityBar.activeBorder": "#2a1816",

@@ -1,12 +1,12 @@
 @use './abstracts' as *;
 
 :root {
-  --background-color: hsl(0deg 0% 85%);
-  --font-color: hsl(0deg 0% 0%);
+  --background-color: hsl(0deg, 0%, 85%);
+  --font-color: hsl(0deg, 0%, 0%);
 
   @media (prefers-color-scheme: dark) {
-    --background-color: hsl(225deg 3% 29%);
-    --font-color: hsl(0deg 0% 100%);
+    --background-color: hsl(225deg, 3%, 29%);
+    --font-color: hsl(0deg, 0%, 100%);
   }
 }
 

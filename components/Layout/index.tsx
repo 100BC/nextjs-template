@@ -5,6 +5,25 @@ import { AllOrNone, XOR } from '@utils/interfaces';
 import { DOMAIN_NAME, META_DESCRIPTION, META_TITLE, SITE_NAME } from '@utils/constants';
 import Header from '@components/Header';
 
+type Props = {
+  title?: string;
+  description?: string;
+  ogpTitle?: string;
+  ogpType?: string;
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  twitterSite?: string;
+  twitterCreator?: string;
+  noIndex?: boolean;
+  className?: string;
+  children?: ReactNode;
+} & AllOrNone<{
+  ogpImg: string | null | undefined;
+  ogpImgAlt: string;
+  ogpImgWidth: number;
+  ogpImgHeight: number;
+}> &
+  XOR<{ canonicalUrl?: string }, { canonicalUrlPath?: string }>;
+
 const Layout = ({
   title = META_TITLE,
   description = META_DESCRIPTION,
@@ -60,24 +79,3 @@ const Layout = ({
 );
 
 export default Layout;
-
-type Props = {
-  title?: string;
-  description?: string;
-  ogpTitle?: string;
-  ogpType?: string;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-  twitterSite?: string;
-  twitterCreator?: string;
-  noIndex?: boolean;
-  className?: string;
-  children?: ReactNode;
-} & AllOrNone<OgpImageProps> &
-  XOR<{ canonicalUrl?: string }, { canonicalUrlPath?: string }>;
-
-interface OgpImageProps {
-  ogpImg: string | null | undefined;
-  ogpImgAlt: string;
-  ogpImgWidth: number;
-  ogpImgHeight: number;
-}

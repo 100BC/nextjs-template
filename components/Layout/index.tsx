@@ -2,7 +2,12 @@ import React, { ReactNode } from 'react';
 import Head from 'next/head';
 
 import { AllOrNone, XOR } from '@utils/interfaces';
-import { DOMAIN_NAME, META_DESCRIPTION, META_TITLE, SITE_NAME } from '@utils/constants';
+import {
+  DOMAIN_NAME,
+  META_DESCRIPTION,
+  META_TITLE,
+  SITE_NAME,
+} from '@utils/constants';
 import Header from '@components/Header';
 
 type Props = {
@@ -54,13 +59,18 @@ const Layout = ({
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:title" content={ogpTitle || title} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content={[canonicalUrl, canonicalUrlPath].join('')} />
+      <meta
+        property="og:url"
+        content={[canonicalUrl, canonicalUrlPath].join('')}
+      />
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={ogpTitle || title} />
       <meta name="twitter:description" content={description} />
       {twitterSite && <meta name="twitter:site" content={twitterSite} />}
-      {twitterCreator && <meta name="twitter:creator" content={twitterCreator} />}
+      {twitterCreator && (
+        <meta name="twitter:creator" content={twitterCreator} />
+      )}
       {/* Image */}
       {ogpImg && (
         <>

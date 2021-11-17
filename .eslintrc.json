@@ -32,7 +32,10 @@
     "arrow-body-style": 0,
     "react/jsx-props-no-spreading": [1, { "custom": "ignore" }],
     "jsx-a11y/label-has-associated-control": [2, { "assert": "htmlFor" }],
-    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": "arrow-function" }
+    ],
 
     /* NextJS */
     // next/link passes the href to the <a> tag

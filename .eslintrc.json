@@ -25,7 +25,7 @@
     "react/require-default-props": 0,
     "@typescript-eslint/no-unused-vars": 0,
     "react/jsx-no-undef": 0,
-    "react/jsx-no-useless-fragment": [2, { "allowExpressions": true }],
+    "react/jsx-no-useless-fragment": [1, { "allowExpressions": true }],
 
     /* Rules */
     "import/prefer-default-export": 0,

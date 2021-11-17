@@ -12,7 +12,7 @@ This template will be updated regularly with new defaults and updates
 
 2. Consider installing the project recommended extensions for VS Code.
 
-   2.1. This project uses [Peacock Extension](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock), to theme VS Code Editor. Edit/remove it as you see fit.
+   2.1. This project uses [Peacock Extension](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock), to theme VS Code Editor. Edit/remove it as you see fit in `.vscode`.
 
 3. Install packages: `yarn install`
 
@@ -30,7 +30,7 @@ This template will be updated regularly with new defaults and updates
 
   - The repo uses [normalize.css](https://www.npmjs.com/package/normalize.css), which is imported in `pages/_app.tsx`
 
-  - The repo has system based automatic dark/light mode swap.
+  - The repo has system based automatic dark/light mode. It is defined in the `:root` property in `styles/globals.scss`
 
   - The repo has responsive font size of base 10, 9, 8 based on screen size.
 
@@ -48,13 +48,11 @@ This template will be updated regularly with new defaults and updates
 
 - Change default meta tags variables in `utils/constants.ts`
 
-- Create an image for Open Graph Protocol and replace the placeholder in `public/OGP.png`. The placeholder is defined in `pages/index.tsx`. The image should `1200 x 630` in dimension for best result.
+- Create an image for Open Graph Protocol and replace the placeholder in `public/OGP.png`. The placeholder is defined in `pages/index.tsx`. The image should `1200x630` in dimension or 1.91:1 aspect ratio for best result. Square images of minimum size of `200x200` will also work.
 
 - Edit theming colors in `styles/abstracts/_themes.scss`. Use [Adobe Color](https://color.adobe.com/) to create a gradient. Default is `#4A43DE` and its shades are used.
 
 - Edit any styling presets as needed.
-
-- Remove `.gitkeep` files as needed.
 
 ## Scripts
 

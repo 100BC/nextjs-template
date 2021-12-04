@@ -44,7 +44,7 @@ const Layout = ({
   twitterSite,
   twitterCreator,
   noIndex = false, // prevents the page from being scraped by robots
-  className = '', // styles for the <main> tag that wraps the content
+  className, // styles for the <main> tag that wraps the content
   children,
 }: Props) => (
   <>

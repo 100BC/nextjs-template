@@ -30,8 +30,6 @@ This template will be updated regularly with new defaults and updates
 
   - The repo uses [normalize.css](https://www.npmjs.com/package/normalize.css), which is imported in `pages/_app.tsx`
 
-  - The repo has system based automatic dark/light mode. It is defined in the `:root` property in `styles/globals.scss`
-
   - The repo has responsive font size of base 10, 9, 8 based on screen size.
 
 - The repo utilizes [Open Graph Protocol](https://opengraphprotocol.org/) and [TwitterCards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards). The default values are defined in `utils/constants.ts`.

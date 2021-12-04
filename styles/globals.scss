@@ -1,15 +1,5 @@
 @use './abstracts' as *;
 
-:root {
-  --background-color: hsl(0, 0%, 85%);
-  --font-color: hsl(0, 0%, 0%);
-
-  @media (prefers-color-scheme: dark) {
-    --background-color: hsl(225, 3%, 29%);
-    --font-color: hsl(0, 0%, 100%);
-  }
-}
-
 html {
   font-size: 62.5%;
 
@@ -24,8 +14,8 @@ html {
 
 body {
   font-family: Roboto, sans-serif;
-  color: var(--font-color);
-  background: var(--background-color);
+  color: $font-400;
+  background: $bg-400;
 }
 
 *,

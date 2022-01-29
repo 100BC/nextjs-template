@@ -46,13 +46,13 @@ This template will be updated regularly with new defaults and updates
 
 - `$max-width` scss variable defined in `styles/abstracts/_media-query.scss` allows consistent responsive size
 
-- Theme colors are defined in `styles/abstracts/_media-query.scss`
+- Theme colors are defined in `styles/abstracts/_themes.scss`
 
 ### Other
 
 - The repo uses [@svgr/webpack](https://www.npmjs.com/package/@svgr/webpack) to allow inline SVG components.
 
-- ESLint, Stylelint, and Prettier are pre-configured for this repository
+- ESLint, Stylelint, and Prettier come pre-configured for this repository
 
 - Two TypeScript Generic Types are located in `utils/interfaces.ts` to handle niche use cases. The Generic Types are utilized by the `<Layout>` component
 

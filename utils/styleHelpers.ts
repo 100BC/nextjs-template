@@ -1,7 +1,7 @@
 export const conditional = (
   condition: boolean,
-  className: string,
-  className2?: string
+  className: string | undefined,
+  className2?: string | undefined
 ) => {
   return condition ? className : className2;
 };

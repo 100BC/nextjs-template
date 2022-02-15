@@ -8,7 +8,7 @@ This template will be updated regularly with new defaults and updates
 
 ## Installation
 
-1. Make sure [node](https://nodejs.org/en/) and [yarn](https://classic.yarnpkg.com/en/) are installed on the system.
+1. Make sure [node](https://nodejs.org/en/) and [pnpm](https://pnpm.io/installation) are installed on the system.
 
 2. Consider installing the project recommended extensions for VS Code.
 
@@ -16,9 +16,9 @@ This template will be updated regularly with new defaults and updates
 
    2.2. This project uses [Peacock Extension](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock) to theme VS Code Editor. Edit/remove it as you see fit in `.vscode`.
 
-3. Install packages: `yarn install`
+3. Install packages: `pnpm install`
 
-4. Start dev server: `yarn dev`
+4. Start dev server: `pnpm dev`
 
 ## Guidelines & Recommendations
 
@@ -79,61 +79,61 @@ This template will be updated regularly with new defaults and updates
 Open website on http://localhost:3000/
 
 ```
-yarn dev
+pnpm dev
 ```
 
 Open website on http://localhost:{PORT}/
 
 ```
-yarn dev -p {PORT}
+pnpm dev -p {PORT}
 ```
 
 compile code
 
 ```
-yarn build
+pnpm build
 ```
 
 start built code
 
 ```
-yarn start
+pnpm start
 ```
 
 Run eslint and stylelint on the project concurrently
 
 ```
-yarn lint:all
+pnpm lint:all
 ```
 
 Lint only styles
 
 ```
-yarn lint:styles
+pnpm lint:styles
 ```
 
 Lint only the code
 
 ```
-yarn lint:code
+pnpm lint:code
 ```
 
 Format project based on eslint, stylelint, and prettier rule sets
 
 ```
-yarn format:all
+pnpm format:all
 ```
 
 Format only the styles
 
 ```
-yarn format:styles
+pnpm format:styles
 ```
 
 Format only the code
 
 ```
-yarn format:code
+pnpm format:code
 ```
 
 ## Suggested Snippets

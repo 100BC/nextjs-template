@@ -12,22 +12,22 @@
 
   // Code Spell Checker
   "cSpell.words": [
-    "MIXINS",
     "msapplication",
     "noindex",
     "preconnect",
-    "stylelint"
+    "stylelint",
+    "pnpm"
   ],
   "cSpell.ignorePaths": [
     "node_modules",
-    "yarn.lock",
     ".vscode",
     ".prettierignore",
     ".prettierrc.json",
     ".stylelintrc.json",
     "package.json",
     "next.config.js",
-    ".env.local"
+    ".env.local",
+    "pnpm-lock.yaml"
   ],
 
   // Peacock

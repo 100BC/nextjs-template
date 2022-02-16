@@ -8,7 +8,7 @@ This template will be updated regularly with new defaults and updates
 
 ## Installation
 
-1. Make sure [node](https://nodejs.org/en/) and [pnpm](https://pnpm.io/installation) are installed on the system.
+1. Make sure [node](https://nodejs.org/en/) and package manager of choice ([npm](https://nodejs.org/en/), [yarn](https://classic.yarnpkg.com/) or [pnpm](https://pnpm.io/installation)) are installed on the system. This README will continue with `pnpm` commands.
 
 2. Consider installing the project recommended extensions for VS Code.
 
@@ -32,7 +32,7 @@ This template will be updated regularly with new defaults and updates
 
 - Page component styles are located in `styles/*` and can be imported with `@styles/*`. Whereas component stylesheets should be located within their respective folders named as `styles.module.scss`.
 
-  - Consider adding the snippets located at the bottom of the README to `typescriptreact.json` file in User Snippets to help with styling.
+  - Consider using the following [snippets](#suggested-snippets) help with styling.
 
 - Change browser styling defaults in `styles/globals.scss`.
 
@@ -44,9 +44,9 @@ This template will be updated regularly with new defaults and updates
 
 - The repo provides two helper functions located in `utils/styleHelpers.ts` to handle common use cases with CSS Module classNames.
 
-- `$max-width` scss variable defined in `styles/abstracts/_media-query.scss` allows consistent responsive size
+- `$max-width` scss variable defined in `styles/themes/_media-query.scss` allows consistent responsive size
 
-- Theme colors are defined in `styles/abstracts/_themes.scss`
+- Theme colors are defined in `styles/themes/_colors.scss`
 
 ### Other
 
@@ -70,7 +70,7 @@ This template will be updated regularly with new defaults and updates
 
 - Create an image for Open Graph Protocol and replace the placeholder in `public/OGP.png`. The placeholder is defined in `pages/index.tsx`. The image should `1200x630` in dimension or 1.91:1 aspect ratio for best result. Square images of minimum size of `200x200` will also work.
 
-- Edit theming colors in `styles/abstracts/_themes.scss`. Use [Adobe Color](https://color.adobe.com/) to create a gradient. Default is `#4A43DE` and its shades are used.
+- Edit theming colors in `styles/themes/_colors.scss`. Use [Adobe Color](https://color.adobe.com/) to create a gradient. Default is `#4A43DE` and its shades are used.
 
 - Edit any styling presets as needed.
 
@@ -158,4 +158,14 @@ pnpm format:code
   "body": ["import styles from '@styles/${1:page}.module.scss';"],
   "description": "import page styles"
 },
+```
+
+### Add to `scss.json`
+
+```
+"@use theme": {
+  "prefix": "thm",
+  "body": ["@use '~styles/themes' as *;"],
+  "description": "import global theme colors and media queries"
+}
 ```

@@ -54,7 +54,7 @@ This template will be updated regularly with new defaults and updates
 
 - ESLint, Stylelint, and Prettier come pre-configured for this repository
 
-- Two TypeScript Generic Types are located in `utils/interfaces.ts` to handle niche use cases. The Generic Types are utilized by the `<Layout>` component
+- Two TypeScript Generic Types are located in `utils/genericTypes.ts` to handle niche use cases. The `<Layout>` component utilizes `AllOrNone` Type.
 
 ## Configure Default Settings
 

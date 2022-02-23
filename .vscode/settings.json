@@ -27,7 +27,9 @@
     "package.json",
     "next.config.js",
     ".env.local",
-    "pnpm-lock.yaml"
+    "pnpm-lock.yaml",
+    "package-lock.json",
+    "yarn.lock"
   ],
 
   // Peacock

@@ -103,37 +103,13 @@ pnpm start
 Run eslint and stylelint on the project concurrently
 
 ```
-pnpm lint:all
+pnpm lint
 ```
 
-Lint only styles
+Format project based on prettier rule sets
 
 ```
-pnpm lint:styles
-```
-
-Lint only the code
-
-```
-pnpm lint:code
-```
-
-Format project based on eslint, stylelint, and prettier rule sets
-
-```
-pnpm format:all
-```
-
-Format only the styles
-
-```
-pnpm format:styles
-```
-
-Format only the code
-
-```
-pnpm format:code
+pnpm format
 ```
 
 ## Suggested Snippets

@@ -6,12 +6,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint:all": "eslint . --ext .js,.jsx,.ts,.tsx && stylelint '**/*.scss'",
-    "lint:code": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:styles": "stylelint '**/*.scss'",
-    "format:all": "eslint . --ext .js,.jsx,.ts,.tsx --fix && stylelint '**/*.scss' --fix && prettier --write .",
-    "format:code": "eslint . --ext .js,.jsx,.ts,.tsx --fix && prettier --write '**/*.{ts,tsx,json}'",
-    "format:styles": "stylelint '**/*.scss' --fix && prettier --write '**/*.scss'"
+    "lint": "eslint --fix '**/*.{ts,tsx}' && stylelint --fix  '**/*.scss'",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "next": "^12.0.0",

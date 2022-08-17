@@ -4,11 +4,11 @@ Template to use to bootstrap [NextJS](https://nextjs.org/) project with [Typescr
 
 The template has settings and prebuilt features described below for easier development. Change them as needed.
 
-This template will be updated regularly with new defaults and updates
+Last Updated 2022-08-16
 
 ## Installation
 
-1. Make sure [node](https://nodejs.org/en/) and package manager of choice ([npm](https://nodejs.org/en/), [yarn](https://classic.yarnpkg.com/) or [pnpm](https://pnpm.io/installation)) are installed on the system. This README will continue with `pnpm` commands.
+1. Install [nvm](https://github.com/nvm-sh/nvm) and your package manager of choice if not using [npm](https://nodejs.org/en/) ([yarn](https://classic.yarnpkg.com/) or [pnpm](https://pnpm.io/installation)). `pnpm` is recommended.
 
 2. Consider installing the project recommended extensions for VS Code.
 
@@ -16,15 +16,23 @@ This template will be updated regularly with new defaults and updates
 
    2.2. This project uses [Peacock Extension](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock) to theme VS Code Editor. Edit/remove it as you see fit in `.vscode`.
 
-3. Install packages: `pnpm install`
+3. Install node using `nvm use`
 
-4. Start dev server: `pnpm dev`
+4. Install packages: `pnpm install`
+
+5. Start dev server: `pnpm dev`
 
 ## Guidelines & Recommendations
 
+### Components & Layouts
+
+- Layouts are container components that wrap around other components and JSX
+
+- Components are reusable code that do not have any nested children
+
 ### Meta Tags & Structure
 
-- Every page component located in `pages/*` should be wrapped in the `<Layout>` component for easy meta tag customization.
+- Every page component located in `pages/*` should be wrapped in the `<MainLayout>` component for easy meta tag customization.
 
   - The repo utilizes [Open Graph Protocol](https://opengraphprotocol.org/) and [TwitterCards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards). The default values are defined in `utils/constants.ts`.
 
@@ -54,7 +62,7 @@ This template will be updated regularly with new defaults and updates
 
 - ESLint, Stylelint, and Prettier come pre-configured for this repository
 
-- Two TypeScript Generic Types are located in `utils/genericTypes.ts` to handle niche use cases. The `<Layout>` component utilizes `AllOrNone` Type.
+- Two TypeScript Generic Types are located in `utils/genericTypes.ts` to handle niche use cases. The `<MainLayout>` component utilizes `AllOrNone` Type.
 
 ## Configure Default Settings
 
@@ -66,7 +74,7 @@ This template will be updated regularly with new defaults and updates
 
 - Generate and replace the default Favicon settings in `pages/_document.tsx` and `public/*`. [RealFaviconGenerator](https://realfavicongenerator.net) was used to create the temporary favicon.
 
-- Change default meta tags variables in `utils/constants.ts`
+- Change default meta tags variables in `layouts/Main/defaultMetaTags.ts`
 
 - Create an image for Open Graph Protocol and replace the placeholder in `public/OGP.png`. The placeholder is defined in `pages/index.tsx`. The image should `1200x630` in dimension or 1.91:1 aspect ratio for best result. Square images of minimum size of `200x200` will also work.
 

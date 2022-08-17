@@ -1,12 +1,11 @@
 import React from 'react';
 
-import Layout from '@components/Layout';
+import MainLayout, { DOMAIN_NAME } from '@layouts/MainLayout';
 import styles from '@styles/home.module.scss';
-import { DOMAIN_NAME } from '@utils/constants';
 
 const Home = () => {
   return (
-    <Layout
+    <MainLayout
       className={styles.home}
       ogpImg={`${DOMAIN_NAME}/OGP.png`}
       ogpImgAlt="Change Me I'm Temporary on a purple background"
@@ -15,7 +14,7 @@ const Home = () => {
       twitterCard="summary_large_image"
     >
       <h1>Hello World</h1>
-    </Layout>
+    </MainLayout>
   );
 };
 

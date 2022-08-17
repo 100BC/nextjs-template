@@ -19,6 +19,7 @@
     "outDir": ".next",
     "paths": {
       "@components/*": ["./components/*"],
+      "@layouts/*": ["./layouts/*"],
       "@public/*": ["./public/*"],
       "@styles/*": ["./styles/*"],
       "@utils/*": ["./utils/*"]

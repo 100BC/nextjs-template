@@ -2,13 +2,13 @@ import React, { ReactNode } from 'react';
 import Head from 'next/head';
 
 import { AllOrNone } from '@utils/genericTypes';
+import Header from '@components/Header';
 import {
   DOMAIN_NAME,
   META_DESCRIPTION,
   META_TITLE,
   SITE_NAME,
-} from '@utils/constants';
-import Header from '@components/Header';
+} from './metaDefaults';
 
 type Props = {
   title?: string;
@@ -29,7 +29,7 @@ type Props = {
   ogpImgHeight: number;
 }>;
 
-const Layout = ({
+const MainLayout = ({
   title = META_TITLE,
   description = META_DESCRIPTION,
   canonicalUrl = DOMAIN_NAME,
@@ -84,4 +84,4 @@ const Layout = ({
   </>
 );
 
-export default Layout;
+export default MainLayout;

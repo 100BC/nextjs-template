@@ -1,5 +1,3 @@
-import React from 'react';
-
 import MainLayout, { DOMAIN_NAME } from '@layouts/MainLayout';
 import styles from '@styles/home.module.scss';
 
